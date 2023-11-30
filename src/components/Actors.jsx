@@ -1,39 +1,36 @@
-export default function Actors({data, setPerso}){
+import SelectActor from "./SelectActor"
+import {useState} from "react"
+
+export default function Actors({data}){
+    const [perso, setPerso] = useState(0)
 
     return(
         <>
-            <div className="h-screen bg-noir bg-wave bg-cover bg-no-repeat flex justify-center items-center flex-row gap-12 px-marge w-full">
-                <div>
-                    <img src={data.actorImage} className="" />
+            <div className="h-screen bg-noir bg-wave bg-cover bg-no-repeat flex justify-center items-center flex-row gap-12 px-marge">
+                <div className="w-1/3">
+                    <img src={data[perso].character.image.original} className="" />
                 </div>
                 <div className="flex flex-col gap-6">
-                    <div className="justify-between flex-row flex">
-                        <div>
-                            <h2 className="text-blanc uppercase font-ff-casa text-6xl">{data.actorName}</h2>
-                            <h3 className="uppercase text-blanc text-2xl font-ff-roboto tracking-widest font-bold">{data.actorCaracter}</h3>
+                    <div className="justify-between flex-row flex w-2/3">
+                        <div className="w-fit">
+                            <h2 className="text-blanc uppercase font-ff-casa text-6xl">{data[perso].person.name}</h2>
+                            <h3 className="uppercase text-blanc text-2xl font-ff-roboto tracking-widest font-bold">{data[perso].character.name}</h3>
                         </div>
-                        <select name="actors" id="my-select" className="h-fit p-4" onChange={(e) => {
-                            e.preventDefault();
-                            setPerso(e.target.value);
+                        <SelectActor data = {data} setPerso={setPerso}/>
 
-                        }
-                        }>
-                            <option value={4}>El Professor</option>
-                            <option value={0}>Helsinki</option>
-                        </select>
                     </div>
-                    <div className="flex-row flex justify-between">
+                    <div className="flex-row flex justify-between w-2/3">
                         <div className="">
                             <p className="text-blanc text-lg font-ff-roboto uppercase tracking-widest">Country</p>
-                            <h2 className="text-blanc uppercase font-ff-casa text-4xl">{data.actorCountry}</h2>
+                            <h2 className="text-blanc uppercase font-ff-casa text-4xl">{data[perso].person.country.name}</h2>
                         </div>
                         <div className="">
                             <p className="text-blanc text-lg font-ff-roboto uppercase tracking-widest">Birthday</p>
-                            <h2 className="text-blanc uppercase font-ff-casa text-4xl">{data.actorBirth}</h2>
+                            <h2 className="text-blanc uppercase font-ff-casa text-4xl">{data[perso].person.birthday}</h2>
                         </div>
                         <div className="">
                             <p className="text-blanc text-lg font-ff-roboto uppercase tracking-widest">Gender</p>
-                            <h2 className="text-blanc uppercase font-ff-casa text-4xl">{data.actorGender}</h2>
+                            <h2 className="text-blanc uppercase font-ff-casa text-4xl">{data[perso].person.gender}</h2>
                         </div>
                     </div>
                 </div>
