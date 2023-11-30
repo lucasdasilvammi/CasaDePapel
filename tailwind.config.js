@@ -23,7 +23,7 @@ export default {
         "home" : "url('./src/assets/bg-home.jpg')",
         "bg-banderole" : "url('./src/assets/banderole.jpg')",
         "wave" : "url('./src/assets/wave.png')",
-        "test" : "https://static.tvmaze.com/uploads/images/medium_portrait/380/951042.jpg",
+        "footer" : "url('./src/assets/footer.png')",
         "gradient-header" : "linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 100%)",
       },
       fontSize: {
