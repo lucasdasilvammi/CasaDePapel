@@ -1,3 +1,5 @@
+import ButtonCVA from "./Buttons";
+
 export default function Home({ data }) {
 
     let summary = data.summary.replace(/(<([^>]+)>)/gi, "");
@@ -10,6 +12,10 @@ export default function Home({ data }) {
                 <div className="flex-row flex gap-8">
                     <img src="./src/assets/kalash.svg" className="" />
                     <p className="text-blanc w-home-desc text-home-desc font-ff-roboto uppercase tracking-widest">{summary}</p>
+                </div>
+                <div className="flex flex-row flex-wrap gap-4">
+                    <ButtonCVA intent={'primary'} size={'medium'} rounded={''}> <img src="./src/assets/Netflix.svg"/> Watch now </ButtonCVA>
+                    <ButtonCVA intent={'secondary'} size={'medium'} rounded={''}> Characters </ButtonCVA>
                 </div>
             </div>
         </div>

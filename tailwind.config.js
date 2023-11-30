@@ -12,6 +12,7 @@ export default {
         "blanc" : "#FFFFFF",
       },
       textColor: {
+        "rouge" : "#BD302D",
         "blanc" : "#FFFFFF",
         "noir" : "#000000",
       },
