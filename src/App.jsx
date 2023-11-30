@@ -3,7 +3,6 @@ import Header from "./components/Header"
 import Trailers from "./components/Trailers"
 import Actors from "./components/Actors"
 import Seasons from "./components/Seasons"
-import SelectActor from "./components/SelectActor"
 
 import useFetch from "./utils/useFetch"
 import {useState} from "react"
@@ -31,9 +30,10 @@ export default function App() {
           seasonSummary: data._embedded.seasons[0].summary,
 
           listActor: data._embedded.cast, 
+          listSeasons: data._embedded.seasons, 
   }
 
-  console.log(TVMaze.listActor)
+  console.log(TVMaze.listSeasons)
   }
   
   
@@ -45,7 +45,7 @@ export default function App() {
       {data &&
       <Home data={TVMaze}/>
       }
-      <Trailers />
+      {/* <Trailers /> */}
       <Header />
       {isLoading && <p>Chargement...</p>}
       {isError && <p>Une erreur est survenue !</p>}
@@ -56,7 +56,7 @@ export default function App() {
       {isLoading && <p>Chargement...</p>}
       {isError && <p>Une erreur est survenue !</p>}
       {data &&
-      <Seasons data={TVMaze}/>
+      <Seasons data={TVMaze.listSeasons}/>
       }
     </>
   )
