@@ -21,7 +21,8 @@ export default function Actors({data}){
                     <div className="flex-row flex justify-between w-2/3">
                         <div className="">
                             <p className="text-blanc text-lg font-ff-roboto uppercase tracking-widest">Country</p>
-                            <h2 className="text-blanc uppercase font-ff-casa text-4xl">{data[perso].person.country.name}</h2>
+                            {/* <h2 className="text-blanc uppercase font-ff-casa text-4xl">{(data[perso].person.country!= null)?data[perso].person.country.name:""} </h2> */}
+                            <h2 className="text-blanc uppercase font-ff-casa text-4xl">{(data[perso].person.country!= null)?data[perso].person.country.name:"Inconnu"} </h2>
                         </div>
                         <div className="">
                             <p className="text-blanc text-lg font-ff-roboto uppercase tracking-widest">Birthday</p>
