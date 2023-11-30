@@ -8,16 +8,15 @@ export default function Actors({data}){
         <>
             <div className="h-screen bg-noir bg-wave bg-cover bg-no-repeat flex justify-center items-center flex-row gap-12 px-marge">
                 <div className="w-1/3">
-                    <img src={data[perso].character.image.original} className="" />
+                    <img src={data[perso].character.image.original} className="max-h-96" />
                 </div>
-                <div className="flex flex-col gap-6">
-                    <div className="justify-between flex-row flex w-2/3">
-                        <div className="w-fit">
+                <div className="flex flex-col gap-6 w-2/3">
+                    <div className="justify-between flex-row flex">
+                        <div className="">
                             <h2 className="text-blanc uppercase font-ff-casa text-6xl">{data[perso].person.name}</h2>
                             <h3 className="uppercase text-blanc text-2xl font-ff-roboto tracking-widest font-bold">{data[perso].character.name}</h3>
                         </div>
                         <SelectActor data = {data} setPerso={setPerso}/>
-
                     </div>
                     <div className="flex-row flex justify-between w-2/3">
                         <div className="">
