@@ -24,7 +24,7 @@ export default function Seasons({ data, actorsdata }) {
   return (
     <>
       <div className="bg-noir flex justify-center items-start px-marge gap-12 w-full py-36">
-        <div className="self-stretch w-2/5">
+        <div className="self-stretch w-2/5 max-w-sm">
         <img
           src={data[season].image.original}
           alt=""
