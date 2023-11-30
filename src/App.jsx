@@ -33,7 +33,7 @@ export default function App() {
           listSeasons: data._embedded.seasons, 
   }
 
-  console.log(TVMaze.listSeasons)
+  console.log(data)
   }
   
   
@@ -56,7 +56,7 @@ export default function App() {
       {isLoading && <p>Chargement...</p>}
       {isError && <p>Une erreur est survenue !</p>}
       {data &&
-      <Seasons data={TVMaze.listSeasons}/>
+      <Seasons data={TVMaze.listSeasons} actorsdata={TVMaze.listActor}/>
       }
     </>
   )
