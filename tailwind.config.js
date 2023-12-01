@@ -55,6 +55,10 @@ export default {
         "home-desc" : "46ch",
         "kalash" : "3rem",
         "kalash-md" : "6rem",
+        "video-md" : "30rem",
+      },
+      maxHeight:{
+        "video-md": "22rem"
       },
       letterSpacing:{
         "home-desc" : "10%",
