@@ -1,5 +1,5 @@
 import { cva } from "class-variance-authority";
-const base = "flex gap-2";
+const base = "flex gap-2 duration-500";
 
 const button = cva(base, {
   variants: {
@@ -11,9 +11,13 @@ const button = cva(base, {
       small: ["text-sm", "py-1", "px-2"],
       medium: ["text-xl", "py-4", "px-8"],
     },
-    rounded: {
-      rd: ["rounded-full"],
-      nrd: "",
+    hover: {
+      primary: ["hover:bg-blanc", "hover:text-rouge"],
+      secondary: ["hover:bg-rouge", "hover:text-blanc"],
+    },
+    fill: {
+      primary: ["hover:fill-blanc"],
+      secondary: ["hover:fill-rouge"],
     },
   },
   compoundVariants: [],
@@ -27,12 +31,13 @@ export default function ButtonCVA({
   className,
   intent,
   size,
-  rounded,
+  hover,
+  fill,
   ...props
 }) {
   return (
     <button
-      className={button({ intent, size, rounded, className })}
+      className={button({ intent, size, hover, fill, className })}
       {...props}
     />
   );

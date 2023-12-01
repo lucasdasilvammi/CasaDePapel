@@ -30,19 +30,31 @@ export default {
       fontSize: {
         "title" : "44px",
         "petit" : "10px",
-        "home-desc" : "20px"
+        "home-desc" : "20px",
+
+        "title" : "44px",
+        "petit" : "10px",
+        "desc-phone" : "16px"
       },
       gap:{
         "espace" : "54px"
       },
       padding:{
-        "marge" : "10rem",
+        "marge" : "12%",
+        "marge-tablet" : "8%",
+        "marge-phone" : "5%",
+
         "bord" : "65px",
         "top-btn" : "20px",
         "bottom-btn" : "44px",
       },
       width:{
         "home-desc" : "46ch",
+      },
+      maxWidth:{
+        "home-desc" : "46ch",
+        "kalash" : "3rem",
+        "kalash-md" : "6rem",
       },
       letterSpacing:{
         "home-desc" : "10%",
