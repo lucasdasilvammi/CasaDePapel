@@ -6,7 +6,7 @@ export default function Actors({ data }) {
 
   return (
     <>
-      <div className="bg-noir py-16 bg-wave bg-cover bg-center bg-no-repeat flex justify-center items-center flex-row xl:flex-row md:flex-row gap-12 px-marge sm:flex-col sm:items-center sm:justify-center">
+      <div className="bg-noir py-16 bg-wave bg-cover bg-center bg-no-repeat flex justify-center items-center xl:flex-row md:flex-row gap-12 px-marge flex-col">
         {/* <div className="w-1/3 flex items-end">
           <img
             src={data[perso].character.image.original}
@@ -14,7 +14,7 @@ export default function Actors({ data }) {
           />
         </div> */}
 
-        <div className="self-stretch w-1/3 max-w-sm md:w-4/12 sm:w-full sm:self-center">
+        <div className="xl:self-stretch xl:w-1/3 max-w-sm md:w-4/12 w-full self-center">
         <img
           src={data[perso].character.image.original}
           alt=""
@@ -45,9 +45,9 @@ export default function Actors({ data }) {
               </div>
             </div>
           </div>
-          <div className="flex-row xl:flex-row md:flex-row flex xl:gap-16 md:gap-8 xl:w-4/5 md:w-full xl:bg-blue-600 md:bg-green-700 sm:bg-yellow-600 xl:items-start items-center xl:justify-start justify-center sm:flex-col">
+          <div className="xl:flex-row md:flex-row flex xl:gap-16 md:gap-8 xl:w-4/5 md:w-full xl:bg-blue-600 md:bg-green-700 bg-yellow-600 xl:items-start items-center xl:justify-start justify-center flex-col">
             <div className="">
-              <p className="text-blanc xl:text-base md:text-sm sm:text-base text-base font-ff-roboto uppercase tracking-widest sm:w-full">
+              <p className="text-blanc xl:text-base md:text-sm text-base font-ff-roboto uppercase tracking-widest w-full">
                 Country
               </p>
               <h2 className="text-blanc uppercase font-ff-casa xl:text-5xl md:text-4xl">
@@ -57,7 +57,7 @@ export default function Actors({ data }) {
               </h2>
             </div>
             <div className="">
-              <p className="text-blanc xl:text-base md:text-sm sm:text-base text-base font-ff-roboto uppercase tracking-widest sm:w-full">
+              <p className="text-blanc xl:text-base md:text-sm text-base font-ff-roboto uppercase tracking-widest w-full">
                 Birthday
               </p>
               <h2 className="text-blanc uppercase font-ff-casa xl:text-5xl md:text-4xl">
@@ -65,7 +65,7 @@ export default function Actors({ data }) {
               </h2>
             </div>
             <div className="">
-              <p className="text-blanc xl:text-base md:text-sm sm:text-base text-base font-ff-roboto uppercase tracking-widest sm:w-full">
+              <p className="text-blanc xl:text-base md:text-sm text-base font-ff-roboto uppercase tracking-widest w-full">
                 Gender
               </p>
               <h2 className="text-blanc uppercase font-ff-casa xl:text-5xl md:text-4xl">

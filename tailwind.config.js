@@ -28,25 +28,22 @@ export default {
         "gradient-header" : "linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 100%)",
       },
       fontSize: {
-        "title" : "44px",
-        "petit" : "10px",
-        "home-desc" : "20px",
-
-        "title" : "44px",
-        "petit" : "10px",
-        "desc-phone" : "16px"
+        "title" : "2.75rem",
+        "petit" : "0.625rem",
+        "home-desc" : "1.25rem",
+        "desc-phone" : "1rem",
       },
       gap:{
-        "espace" : "54px"
+        "espace" : "3.375rem",
       },
       padding:{
         "marge" : "12%",
         "marge-tablet" : "8%",
         "marge-phone" : "5%",
 
-        "bord" : "65px",
-        "top-btn" : "20px",
-        "bottom-btn" : "44px",
+        "bord" : "4.0625rem",
+        "top-btn" : "1.25rem",
+        "bottom-btn" : "2.75rem",
       },
       width:{
         "home-desc" : "46ch",
