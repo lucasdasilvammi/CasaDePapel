@@ -10,14 +10,14 @@ export default function SelectActor({ data, setPerso }) {
           name=""
           id=""
           onChange={handlerChange}
-          className="font-ff-roboto tracking-widest font-normal uppercase w-fit bg-none h-fit focus:outline-none"
+          className="font-ff-roboto font-normal uppercase bg-none h-fit focus:outline-none"
         >
           {data &&
             data.map((actor, i) => (
               <option
                 value={i}
                 key={actor.character.id}
-                className="font-ff-roboto tracking-widest font-normal uppercase hover:text-blue-500"
+                className="font-ff-roboto font-normal uppercase"
               >
                 {actor.character.name}
               </option>
