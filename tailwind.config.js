@@ -60,7 +60,7 @@ export default {
       },
       letterSpacing:{
         "home-desc" : "10%",
-      }
+      },
     },
   },
   plugins: [],

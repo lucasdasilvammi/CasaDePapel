@@ -6,26 +6,19 @@ export default function Actors({ data }) {
 
   return (
     <>
-      <div className="bg-noir xl:py-16 md:py-16 pt-8 pb-24 xl:bg-wave md:bg-wave sm:pt-16 bg-wave-mobile bg-cover md:pb-24 bg-center bg-no-repeat flex justify-center items-center xl:flex-row md:flex-row gap-8 xl:gap-12 md:gap-12 px-marge flex-col">
-        {/* <div className="w-1/3 flex items-end">
-          <img
-            src={data[perso].character.image.original}
-            className="max-h-96 rounded-xl shadow-2xl"
-          />
-        </div> */}
-
-        <div className="xl:self-stretch xl:w-1/3 max-w-sm md:w-4/12 w-full self-center">
+      <div className="bg-noir xl:py-24 md:py-16 pt-8 pb-24 xl:bg-wave md:bg-wave sm:pt-16 bg-wave-mobile bg-cover md:pb-24 bg-center bg-no-repeat flex justify-center items-center xl:flex-row md:flex-row gap-8 xl:gap-12 md:gap-12 px-marge flex-col">
+        <div className="xl:self-stretch xl:w-1/3 max-w-sm md:w-4/12 sm:w-full w-4/5 self-center -mb-16">
         <img
           src={data[perso].character.image.original}
           alt=""
-          className="rounded-xl h-full object-cover"
+          className="rounded-2xl h-full object-cover"
         />
         </div>
 
         <div className="flex flex-col md:gap-6 xl:gap-12 xl:w-2/3 md:w-2/3 gap-6 w-full">
           <div className="xl:justify-between md:justify-center md:items-center xl:flex-row md:flex-col flex xl:relative md:gap-4 flex-col gap-4 w-full items-center">
             <div className="flex flex-col xl:gap-1 md:gap-1 gap-0 xl:items-start items-center">
-              <h2 className="text-blanc uppercase font-ff-casa xl:text-7xl md:text-7xl sm:text-7xl text-5xl xl:leading-10 md:leading-10 text-center">
+              <h2 className="text-blanc uppercase font-ff-casa xl:text-7xl md:text-7xl sm:text-7xl text-6xl xl:leading-10 md:leading-10 text-center"  style={{ textShadow: '0px 0px 25px rgba(0, 0, 0, 0.5)' }}>
                 {data[perso].person.name}
               </h2>
               <h3 className="uppercase text-blanc xl:text-xl md:text-xl sm:text-xl text-base font-ff-roboto tracking-widest">
@@ -45,7 +38,7 @@ export default function Actors({ data }) {
               </div>
             </div>
           </div>
-          <div className="xl:flex-row md:flex-row flex xl:gap-16 md:gap-8 gap-2 xl:w-4/5 md:w-full xl:bg-blue-600 md:bg-green-700 sm:bg-red-900 bg-yellow-600 xl:items-start items-center xl:justify-start justify-center flex-col">
+          <div className="xl:flex-row md:flex-row flex xl:gap-16 md:gap-8 gap-2 xl:w-4/5 md:w-full xl:items-start items-center xl:justify-start justify-center flex-col">
             <div className="">
               <p className="text-blanc xl:text-base md:text-sm text-sm text-center font-ff-roboto uppercase tracking-widest w-full">
                 Country
