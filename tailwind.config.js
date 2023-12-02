@@ -21,11 +21,11 @@ export default {
         "ff-roboto" : "'Roboto Condensed', sans-serif"
       },
       backgroundImage:{
-        "home" : "url('./src/assets/bg-home.jpg')",
-        "bg-banderole" : "url('./src/assets/banderole.jpg')",
-        "wave" : "url('./src/assets/wave.png')",
-        "wave-mobile" : "url('./src/assets/wave-mobile.png')",
-        "footer" : "url('./src/assets/footer.png')",
+        "home" : "url('./assets/bg-home.jpg')",
+        "bg-banderole" : "url('./assets/banderole.jpg')",
+        "wave" : "url('./assets/wave.png')",
+        "wave-mobile" : "url('./assets/wave-mobile.png')",
+        "footer" : "url('./assets/footer.png')",
         "gradient-header" : "linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 100%)",
       },
       fontSize: {

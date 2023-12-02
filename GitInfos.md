@@ -23,7 +23,26 @@ git push -u origin main
 
     git pull
 
-    git -commit -m "Mon message"
+    git commit -m "Mon message"
     git status
 
     git push
+
+
+@layer base {
+    ::-webkit-scrollbar { 
+        width: 8px; 
+      } 
+
+      /* Track */
+      ::-webkit-scrollbar-track { 
+        background: #181818;
+      } 
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb { 
+        background: #BD302D; 
+        border-radius: 6px;
+        box-shadow: inset 4px 0px 50px 10px rgba(0,0,0,0.1);
+      }
+  }

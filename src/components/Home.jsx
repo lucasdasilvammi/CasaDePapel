@@ -18,8 +18,8 @@ export default function Home({ data }) {
                     <p className="text-blanc max-w-home-desc md:text-home-desc sm:text-desc-phone font-ff-roboto uppercase tracking-widest">{summary}</p>
                 </div>
                 <div className="flex flex-row flex-wrap gap-4 items-center justify-center">
-                    <ButtonCVA intent={'primary'} size={'medium'} hover={'primary'}><Netflix/> Watch now</ButtonCVA>
-                    <ButtonCVA intent={'secondary'} size={'medium'} hover={'secondary'}><Person/> Characters </ButtonCVA>
+                    <a href={data.watch} target="_blank"><ButtonCVA intent={'primary'} size={'medium'} hover={'primary'}><Netflix/> Watch now</ButtonCVA></a>
+                    <a href="#Characters"><ButtonCVA intent={'secondary'} size={'medium'} hover={'secondary'}><Person/> Characters </ButtonCVA></a>
                 </div>
             </div>
         </div>

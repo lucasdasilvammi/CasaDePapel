@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Seasons({ data, actorsdata }) {
+export default function Seasons({ data, actorsdata, setPerso }) {
   const [season, setSeason] = useState(0);
 
   const next = () => {
@@ -14,12 +14,18 @@ export default function Seasons({ data, actorsdata }) {
     setSeason(nextCount);
   };
 
-  const handlerChange = (e) => {
-    e.preventDefault();
-    setSeason(e.target.value);
-  };
-
   let summary = data[season].summary.replace(/(<([^>]+)>)/gi, "");
+
+  const handlerChange = (e, index) => {
+    e.preventDefault();
+    setPerso(index);
+
+  // Faire défiler la vue vers l'élément avec l'ID #Characters
+  const targetElement = document.getElementById('Characters');
+  if (targetElement) {
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+  }
+  };
 
   return (
     <>
@@ -76,9 +82,11 @@ export default function Seasons({ data, actorsdata }) {
               </p>
               <div className="flex flex-wrap xl:w-3/4 gap-4 justify-center sm:justify-start">
                 {actorsdata &&
-                  actorsdata.map((actor) => (
+                  actorsdata.map((actor, index) => (
                     <img
-                      className="w-12 h-12 rounded-full aspect-square object-cover"
+                      key={actor.character.id}
+                      onClick={(e) => handlerChange(e, index)}
+                      className="test w-12 h-12 rounded-full aspect-square object-cover "
                       src={actor.character.image.original}
                       alt=""
                     />

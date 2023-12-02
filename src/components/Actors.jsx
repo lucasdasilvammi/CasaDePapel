@@ -1,12 +1,11 @@
 import SelectActor from "./SelectActor";
 import { useState } from "react";
 
-export default function Actors({ data }) {
-  const [perso, setPerso] = useState(0);
+export default function Actors({ data, setPerso, perso }) {
 
   return (
     <>
-      <div className="bg-noir xl:py-24 md:py-16 pt-8 pb-24 xl:bg-wave md:bg-wave sm:pt-16 bg-wave-mobile bg-cover md:pb-24 bg-center bg-no-repeat flex justify-center items-center xl:flex-row md:flex-row gap-8 xl:gap-12 md:gap-12 px-marge flex-col">
+      <div id="Characters" className="bg-noir xl:py-48 md:py-16 pt-8 pb-24 xl:bg-wave md:bg-wave sm:pt-16 bg-wave-mobile bg-cover md:pb-24 bg-center bg-no-repeat flex justify-center items-center xl:flex-row md:flex-row gap-8 xl:gap-12 md:gap-12 px-marge flex-col">
         <div className="xl:self-stretch xl:w-1/3 max-w-sm md:w-4/12 sm:w-full w-4/5 self-center -mb-16">
         <img
           src={data[perso].character.image.original}
