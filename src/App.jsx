@@ -13,6 +13,7 @@ let TVMaze = {}
 
 export default function App() {
 
+  const [perso, setPerso] = useState(0);
 
   const urlID = `https://api.tvmaze.com/shows/${ID}?embed[]=seasons&embed[]=cast`
 
@@ -20,6 +21,7 @@ export default function App() {
   const {isLoading, isError, data} = useFetch(url)
   if(data) {
       TVMaze = {
+          watch: data.officialSite,
           summary: data.summary,
           // Image Couverture de l'episode
           image: data._embedded.seasons[0].image.original,
@@ -51,13 +53,13 @@ export default function App() {
       {isLoading && <p>Chargement...</p>}
       {isError && <p>Une erreur est survenue !</p>}
       {data &&
-      <Actors data={TVMaze.listActor}/>
+      <Actors data={TVMaze.listActor} setPerso={setPerso} perso={perso}/>
       }
 
       {isLoading && <p>Chargement...</p>}
       {isError && <p>Une erreur est survenue !</p>}
       {data &&
-      <Seasons data={TVMaze.listSeasons} actorsdata={TVMaze.listActor}/>
+      <Seasons data={TVMaze.listSeasons} actorsdata={TVMaze.listActor} setPerso={setPerso}/>
       }
       <Footer />
     </>
