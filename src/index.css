@@ -5,8 +5,8 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap'); */
 
 @font-face {
-    font-family: "Coluna Family";
-    src: url("assets/Coluna.otf") format("opentype");
+    font-family: "Coluna";
+    src: url("./assets/Coluna.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
 };
